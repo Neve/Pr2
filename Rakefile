@@ -18,3 +18,8 @@ task :get_common do
     cp_r source, target #, :verbose => true
   end
 end
+
+ task :load_sql do
+      load_cmd= "mysql < db/app_test.sql"
+      system(load_cmd)
+     end
